@@ -5,8 +5,22 @@ function setup() {
 function draw() {
   background(255);
   fill(0);
-  rect(width / 2.5, height / 4, width / 20, height / 2);
-  rect(width - width / 2.5 - width / 20, height / 4, width / 20, height / 2);
-  rect(width / 2.5 + width / 20, height / 4 - width / 20, width - 2 * width / 2.5 - 2 * width / 20, width / 20);
-  rect(width / 2.5 + width / 20, height / 4 + height / 2, width - 2 * width / 2.5 - 2 * width / 20, width / 20);
+  print(second());
+}
+
+
+function draw() {
+  background("orange");
+  let secondsNow = second();
+  let minutesNow = minute();
+  let hourNow = hour();
+
+  let s = map(secondsNow, 0, 59, 0, width);
+  let w = map(minutesNow, 0, 59, 5, 100);
+  let h = map(hourNow, 0, 23, 10, height-10);
+
+  stroke("black");
+  strokeWeight(w);
+  line(0, h, s, h);
+  
 }
