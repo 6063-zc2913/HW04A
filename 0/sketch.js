@@ -17,7 +17,7 @@ function draw() {
 
   let s = map(secondsNow, 0, 59, 0, width);
   let w = map(minutesNow, 0, 59, 5, 100);
-  let h = map(hourNow, 0, 23, 10, height-10);
+  let h = map(hourNow, 0, 23, 100, height-100);
 
   stroke("black");
   strokeWeight(w);
